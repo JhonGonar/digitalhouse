@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                dir('jenkins/ejercicios/cicd/infra-ii/src/test/java/digitalhouse') {
+                dir('jenkins/ejercicios/cicd/infra-ii') {
                     sh 'mvn test'
                 }
             }
