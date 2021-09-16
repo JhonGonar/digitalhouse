@@ -25,6 +25,11 @@ pipeline {
         }
     }
     post {
+        always {
+                dir('maven-adderapp') {
+                junit 'target/surefire-reports/*.xml'
+                }
+            }
         success {
             dir (‘maven-adderapp’) {
                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
