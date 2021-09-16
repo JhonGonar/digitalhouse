@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('jenkins/ejercicios/cicd/infra-ii') {
-                     'mvn test'
+                    sh 'mvn test'
                 }
             }
         }
